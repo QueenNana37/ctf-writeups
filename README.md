@@ -1,4 +1,4 @@
-# CTF Write-ups
+# CTF write-ups
 
 This repository contains write-ups from Capture The Flag (CTF) challenges
 that I complete to learn cybersecurity concepts.
