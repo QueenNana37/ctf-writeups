@@ -53,6 +53,6 @@ picoCTF{Pat!3nt_15_Th3_K3y_1c3af720}
 
 
 
-##Security Takeaway##
+## Security Takeaway ##
 
 This challenge demonstrates the danger of leaving debug or diagnostic endpoints publicly accessible. Heap dumps can expose sensitive data such as credentials, tokens, and secrets, and should never be exposed in production environments.
