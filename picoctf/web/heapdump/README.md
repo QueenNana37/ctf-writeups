@@ -19,7 +19,7 @@ Swagger UI exposed the available API endpoints and allowed interaction with them
 
 While reviewing the documented routes, I focused on endpoints that appeared internal or diagnostic in nature. Under the **Diagnosing** section, the following endpoint immediately stood out:
 
-GET /heapdump
+'GET /heapdump'
 
 
 The description suggested that this endpoint generated a memory dump, which aligned perfectly with the challenge objective.
@@ -43,13 +43,16 @@ http://verbal-sleep.picoctf.net:57495/heapdump
 
 Heap dump files can be extremely large, so instead of manually inspecting the file, I searched for the expected flag format.
 
-On Windows, I used [Ctrl + F] and searched for "picoctf"
+On Windows, I searched the heap dump for the flag format using `Ctrl + F` and the keyword `picoCTF`.
+
 
 This quickly revealed the flag stored in plaintext within the server’s memory.
+
+
 picoCTF{Pat!3nt_15_Th3_K3y_1c3af720}
 
 
 
-Security Takeaway
+##Security Takeaway##
 
 This challenge demonstrates the danger of leaving debug or diagnostic endpoints publicly accessible. Heap dumps can expose sensitive data such as credentials, tokens, and secrets, and should never be exposed in production environments.
